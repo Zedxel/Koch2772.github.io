@@ -75,7 +75,7 @@ $stat = status();
                 } else { ?>
                     <a href="#" id="carttotal">? ITEM | $??</a>
                 <?php } 
-                mysqli_close($conn);?>
+                ?>
 
                 <a href="#" id="carttext" onclick="openNav()">View Cart /</a>
                 <a href="#" id="carttext">Checkout</a>
