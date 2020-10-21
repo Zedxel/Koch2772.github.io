@@ -13,7 +13,7 @@ $_SERVER["REQUEST_METHOD"] == "POST";
     $uname = $_POST['username'];
     $pword = $_POST['password'];
         // Prepare a select statement
-        $sql = "SELECT custid, usrnme, pwd FROM Details WHERE usrnme = ? && pwd = ?";
+        $sql = "SELECT custid, usrnme, pwd FROM Customer WHERE usrnme = ? && pwd = ?";
         
         $stmt = mysqli_prepare($conn, $sql);
             // Bind variables to the prepared statement
