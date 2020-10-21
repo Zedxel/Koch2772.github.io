@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+session_start();
+?>
 <html lang="en">
   <head>
     <link rel="stylesheet" href="styles/style.css">
@@ -35,6 +38,40 @@
             <div class="ship-submit-Detail">
               <div id="list-ship-detail">
             <?php 
+
+            include_once 'db_functions.php';
+            include_once 'inc/dbconn.inc.php';
+
+            // Creates an invoice for user - adds to database
+            if ($conn) {
+                  $fName = $_POST["shipfName"];
+                  $lName = $_POST["shiplName"];
+                  $email = $_POST["shipEmail"];
+                  $address1 = $_POST["shipAddress1"];
+                  $address2 = $_POST["shipAddress2"];
+                  $apartment = $_POST["shipApartment"];
+                  $planet = $_POST["shipSuburb"];
+                  $galaxy = $_POST["shipGalaxy"];
+                  $system = $_POST["shipSystem"];
+                  $postcode = $_POST["shipPostcode"];
+                  $phone = $_POST["shipPhone"];
+                  $creditcard = $_post["creditcard"];
+
+                  $finCost = update_cart_cost($conn);
+
+                  create_invoice($conn, $fName, $lName, $email, $address1, $address2, $apartment, $planet, $galaxy, $system, $postcode, $phone, $finCost);
+                  delete_cart($conn);
+            }
+            else {
+            echo "Connection to database failed";
+                  return false;
+            }
+
+
+
+            // Removes the users cart from the database - update product QTY
+
+
                 echo  "<div id = \"ship-cust-Name\">" ;
                       echo " Name : " . $_POST['shipfName'] . "&nbsp;" . $_POST['shiplName'];
 
@@ -100,6 +137,16 @@
 
                       echo " Phone : " .$_POST['shipPhone'];
                 echo "</div>";
+
+                echo "<div id =\"ship-cust-CreditCard\">";
+
+                echo " Credit Card : " .$_POST['creditcard'];
+                echo "</div>";
+
+                echo "</div>";
+
+                  echo "<a href='index.php'>RETURN TO HOME</a>";
+
 
               ?>
               

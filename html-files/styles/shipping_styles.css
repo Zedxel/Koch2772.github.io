@@ -51,7 +51,7 @@
 }
 
 
-#shipEmail, #shipAddress1, #shipAddress2, #shipSuburb, #shipPhone, #shipPostcode
+#shipEmail, #shipAddress1, #shipAddress2, #shipSuburb, #shipPhone, #shipPostcode, #creditcard
 {   
     width:90%;
     border:1px solid  #aaa;
@@ -62,13 +62,13 @@
     margin-left: 2%;
 }
 
-#shipfName:hover, #shiplName:hover,#shipEmail:hover, #shipAddress1:hover, #shipAddress2:hover, #shipSuburbt:hover, #shipPhone:hover,#shipPostcode:hover
+#shipfName:hover, #shiplName:hover,#shipEmail:hover, #shipAddress1:hover, #shipAddress2:hover, #shipSuburbt:hover, #shipPhone:hover,#shipPostcode:hover, #creditcard:hover
 {
     border:1px solid orange ;
 }
 
 
-#shipfName:focus, #shiplName:focus, #shipEmail:focus, #shipAddress1:focus, #shipAddress2:focus, #shipSuburb:focus, #shipPhone:focus, #shipPostcode:focus
+#shipfName:focus, #shiplName:focus, #shipEmail:focus, #shipAddress1:focus, #shipAddress2:focus, #shipSuburb:focus, #shipPhone:focus, #shipPostcode:focus, #creditcard:focus
 {
     border:2px solid orange;
     
@@ -176,7 +176,7 @@ label
     
 }
 
-#ship-cust-Name, #ship-cust-Email, #ship-cust-Address1 , #ship-cust-Address2, #ship-cust-Apartment, #ship-cust-Suburb, #ship-cust-Galaxy, #ship-cust-Postcode, #ship-cust-Planet, #ship-cust-Phonenumber 
+#ship-cust-Name, #ship-cust-Email, #ship-cust-Address1 , #ship-cust-Address2, #ship-cust-Apartment, #ship-cust-Suburb, #ship-cust-Galaxy, #ship-cust-Postcode, #ship-cust-Planet, #ship-cust-Phonenumber, #ship-cust-CreditCard 
 {
     padding-top: 10px;
     padding-bottom: 10px;

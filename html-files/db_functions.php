@@ -139,4 +139,30 @@ function remove_item($conn, $stockNum) {
     }
 }
 
+function create_invoice($conn, $fName, $lName, $email, $address1, $address2, $apartment, $planet,
+                                                                 $galaxy, $system, $postcode, $phone, $finCost) {
+
+    $query = "INSERT INTO invoice(custId, fname, lname, email, address, address2, apartType, Suburb, galaxy, sSystem, Postcode, phone, finCost) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+
+    $stmt = mysqli_prepare($conn, $query);
+
+    if ($stmt) {
+        mysqli_stmt_bind_param($stmt, "sssssssssssss", $_SESSION['id'], $fName, $lName, $email, $address1, $address2, $apartment, $planet, $galaxy, $system, $postcode, $phone, $finCost);
+        mysqli_stmt_execute($stmt);
+    } else {
+        return FALSE;
+    }
+}
+
+function delete_cart($conn) {
+    $query = "DELETE FROM cart WHERE custId=?";
+
+    $stmt = mysqli_prepare($conn, $query);
+
+    if ($stmt) {
+        mysqli_stmt_bind_param($stmt, "s", $_SESSION['id']);
+        mysqli_stmt_execute($stmt);
+    }
+}
+
 ?>

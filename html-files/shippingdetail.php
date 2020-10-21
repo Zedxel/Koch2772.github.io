@@ -105,6 +105,9 @@
         <div class = "phoneNumber">
             <input type="text" placeholder="Phone" id="shipPhone" name="shipPhone" >
         </div> 
+        <div class = "phoneNumber">
+            <input type="text" placeholder="Creditcard" id="creditcard" name="creditcard" required>
+        </div> 
           
   </div>
   <div class = ship-button>

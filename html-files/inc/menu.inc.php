@@ -87,9 +87,9 @@ $stat = status();
                 mysqli_close($conn);?>
 
                 <a href="#" id="carttext" onclick="openNav()">View Cart /</a>
-                <a href="#" id="carttext">Checkout</a>
+                <a href="shippingdetail.php" id="carttext">Checkout</a>
             </li>
-            <i class="fa fa-shopping-cart" style="font-size:32px;color:purple"></i>
+            <a href="shippingdetail.php" class="fa fa-shopping-cart" style="font-size:32px;color:purple"></a>
         </span>
         <div>
         <li><a href="Loginpage.html" id="menuLogin">Login /</a>
