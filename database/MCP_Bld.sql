@@ -6,7 +6,7 @@ CREATE DATABASE MCP;
 USE MCP;
 
 CREATE TABLE Customer(
-	custId id AUTO_INCREMENT PRIMARY KEY,
+	custId INT AUTO_INCREMENT,
 	title varchar(8),
 	fname varchar(40) NOT NULL,
 	lname varchar(40) NOT NULL,
@@ -59,14 +59,14 @@ CREATE TABLE Product (
 );
 
 CREATE TABLE Card (
-	custId varchar(8) NOT NULL,
+	custId INT NOT NULL,
 	cardNum	char(21) NOT NULL,
 	PRIMARY KEY(custId),
 	FOREIGN KEY(custId) REFERENCES Customer(custId)
 );
 
 CREATE TABLE Cart (
-	custId varchar(8) NOT NULL,
+	custId INT NOT NULL,
 	stockNum varchar(10),
 	unitCost decimal(6,2),
 	qty int(3),
@@ -75,20 +75,20 @@ CREATE TABLE Cart (
 );
 
 CREATE TABLE Invoice (
-	custId varchar(8)NOT NULL PRIMARY KEY,
-	invoiceId AUTO_INCREMENT PRIMARY KEY,
+	invoiceId INT AUTO_INCREMENT,
+	custId INT NOT NULL,
 	invoiceDate	timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	address varchar(45) NOT NULL,
 	address2 varchar(45),
 	apartType varchar(45),
 	Suburb varchar(45) NOT NULL,
 	galaxy varchar(45) NOT NULL,
-	system varchar(45) NOT NULL,
+	sSystem varchar(45) NOT NULL,
 	Postcode char(5) NOT NULL,
 	phone varchar(14) NOT NULL DEFAULT 555,
 	deliveryFee decimal(5,2),
 	finCost decimal(8,2) NOT NULL,
-	PRIMARY KEY (custId, invoiceId),
+	PRIMARY KEY (invoiceId, custId),
 	FOREIGN KEY(custId) REFERENCES Customer(custId)
 );
 
