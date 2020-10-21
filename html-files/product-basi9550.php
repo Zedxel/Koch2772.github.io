@@ -36,11 +36,13 @@
             
             <div class="mysticfont"><h3>Basilisk Fang</h3></div>
             <div class="price"><h4>$63</h4></div>
-            <form>
+            <form action="add_to_cart.php" method ="POST">
               <div class="qtyitem">
               <label for="qtyitem" id="titleqtyitem">Quantity:</label>
               <input type="number" id="qtyitem" name="qtyitem" min="1"></div>
-              <div class="add-to-cart"><button class="centerd-button"> Add to cart</button></div>
+              <input type="hidden" name="stockNum" value="basi9550">
+              <input type="hidden" name="unitCost" value="63">
+              <div class="add-to-cart"><input type="submit" class="centerd-button" value="Add to cart"></div>
             </form>
             <div class="stock-ammount"><p>ID: basi9550 Stock:N/A</p></div>
             </div>

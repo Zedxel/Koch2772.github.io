@@ -20,9 +20,6 @@ function check_qty($conn, $stockNum, $qty) {
     }
     mysqli_stmt_close($stmt);
     
-    // remove error line later
-    echo mysqli_error($conn);
-    mysqli_close($conn);
 }
 
 // Function to add items into a cart as well as custId
@@ -42,9 +39,6 @@ function add_to_cart($conn, $custId, $stockNum, $unitCost, $qty) {
         return FALSE;
     }
 
-    // remove error line later
-    echo mysqli_error($conn);
-    mysqli_close($conn);
 }
 
 function update_cart_total($conn) {
