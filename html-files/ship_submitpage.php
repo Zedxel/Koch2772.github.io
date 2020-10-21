@@ -60,18 +60,16 @@ session_start();
                   $finCost = update_cart_cost($conn);
 
                   create_invoice($conn, $fName, $lName, $email, $address1, $address2, $apartment, $planet, $galaxy, $system, $postcode, $phone, $finCost);
+                  
+                  
+                  // Removes the users cart from the database - update product QTY
                   delete_cart($conn);
             }
             else {
             echo "Connection to database failed";
                   return false;
             }
-
-
-
-            // Removes the users cart from the database - update product QTY
-
-
+            // Prints out the invoice details on the page stating the purchase was succesful
                 echo  "<div id = \"ship-cust-Name\">" ;
                       echo " Name : " . $_POST['shipfName'] . "&nbsp;" . $_POST['shiplName'];
 
