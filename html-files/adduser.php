@@ -47,11 +47,12 @@ $_SERVER["REQUEST_METHOD"] == "POST";
     // Check input errors before inserting in database
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)) {
         // Prepare an insert statement
-        $sql = "INSERT INTO Customer (fname, lname, phone, email, usrNme, pwd) VALUES (?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO Customer (title, fname, lname, phone, email, usrNme, pwd) VALUES (?, ?, ?, ?, ?, ?, ?)";
          
         if($stmt = mysqli_prepare($conn, $sql)) {
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ssssss", $_POST["fName"], $_POST["lName"], $_POST["Phone"], $_POST["email"], $uname, $pword);
+            mysqli_stmt_bind_param($stmt, "sssssss", $_POST["custTitle"], $_POST["fName"], $_POST["lName"],
+                             $_POST["Phone"], $_POST["email"], $uname, $pword);
             
             // Set parameters
             $uname = $username;
