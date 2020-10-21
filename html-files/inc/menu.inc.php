@@ -67,15 +67,24 @@ $stat = status();
                     <a href="#" id="carttotal"><?php echo $cartTotal; ?> 
                             <?php 
                                 if($cartTotal > 1) {
-                                    echo "ITEMS | ";
+                                    echo "<span id = \"cart_success1\">";
+                                         echo "ITEMS | ";
+                                    echo"</span>";     
                                 } else {
-                                    echo "ITEM | ";
-                                } ?> $<?php echo $cartCost; ?></a>
-                    <?php 
-                } else { ?>
-                    <a href="#" id="carttotal">? ITEM | $??</a>
-                <?php } 
-                ?>
+                                    echo "<span id = \"cart_success2\">";
+                                        echo "ITEM | ";
+                                    echo "</span>";
+
+                                }
+                                 ?> $<?php echo $cartCost; ?></a>
+                                 <?php
+
+                                } else { ?>
+                                    <a href="#" id="carttotal"><span id="cart_fail">? ITEM | $??</span></a>
+
+                                 <?php } 
+
+                mysqli_close($conn);?>
 
                 <a href="#" id="carttext" onclick="openNav()">View Cart /</a>
                 <a href="#" id="carttext">Checkout</a>
@@ -83,12 +92,21 @@ $stat = status();
             <i class="fa fa-shopping-cart" style="font-size:32px;color:purple"></i>
         </span>
         <div>
-            <li><a href="Loginpage.html" id="menuLogin">Login /</a><a href="Logout.php" id="menuLogin">Logout</a></li>
-            <li class="menuStat">Status: </li><span class="dolstat"><?php 
+        <li><a href="Loginpage.html" id="menuLogin">Login /</a>
+          
+          <a href="Logout.php" id="menuLogin">Logout</a></li>
+            <li class="menuStat"> <span id="status_text">Status: </span> </li><span class="dolstat"><?php 
                                     if ($_SESSION["loggedin"]) {
-                                        echo $stat; echo $_SESSION["username"]; ?></span> <?php
+                                        echo "<span id = \"status_success\">";
+                                            echo $stat; echo $_SESSION["username"]; 
+                                        echo "</span>";
+                                        ?></span><?php
                                     } else {
-                                        echo $stat; ?></span> <?php
+                                        echo "<span id = \"status_fail\">";
+                                            echo $stat; 
+                                        echo "</span>"; 
+                                     ?></span> <?php
+                                        
                                     } ?>
         </div>
     </ul>

@@ -273,10 +273,12 @@ ul#menu {
 #menu li {
     display: inline-block;
     margin: 2px 10px;
+    
 }
 
 #menucontainer {
     text-align: center;
+    
 }
 
 #menuAbout, #menuCat, #menuFAQ {
@@ -285,6 +287,7 @@ ul#menu {
     text-shadow: 4px 4px 4px #aaa;
     text-decoration: none;
     color: #9b2fda;
+    
     /**
     text-decoration: none;
     margin-right: 15px;
@@ -303,16 +306,50 @@ ul#menu {
 /** CART MENU LINK/TEXT **/
 
 #carttotal {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 10px;
+    font-family: 'Mystical', arial;
+    font-size: 15px;
     text-decoration: none;
     display: block;
+    color: #9b2fda;
 }
 
 #carttext {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 10px;
+    font-family: 'Mystical', arial;
+    font-size: 15px;
     text-decoration: none;
+}
+
+.cart_success1, .cart_success2
+{
+    font-family: 'Mystical', arial;
+    color:#9b2fda;
+
+}
+
+
+
+#menuLogin
+{
+    font-family: 'Mystical', arial;
+    text-decoration: none;
+    font-size: 20px;
+    color: #9b2fda;
+    text-shadow: 4px 4px 4px #aaa;
+}
+
+
+#status_success,#status_fail
+{
+    color: #9b2fda;
+    text-shadow: 4px 4px 4px #aaa;
+
+}
+
+#status_text
+{
+    font-family: 'Mystical', arial;
+    font-size: 23px;
+    text-shadow: 4px 4px 4px #aaa;
 }
 
 
@@ -603,4 +640,3 @@ p {
 	color: #00fc4c;
 	margin-top: 20px;
 }
-
