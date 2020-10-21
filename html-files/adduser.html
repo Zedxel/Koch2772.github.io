@@ -36,7 +36,7 @@ session_start();
     </div>
 
     <!-- start of the form getting customer details -->
-    <form action="savecustdets.php" method ="POST">
+    <form action="adduser.php" method ="POST">
         
     <select name="custTitle" id="custTitle" required="required"><br>
         <option value="Mr">Mr</option>
@@ -83,10 +83,10 @@ session_start();
         <input type="text" placeholder="username" id="uname" name="username">
     </div>    
     <div class="pword">
-        <input type="password" placeholder="password" id="pword" name="password">
+        <input type="password" minlength="6" placeholder="password" id="pword" name="password">
     </div>
     <div class="conf_pword">
-        <input type="password" placeholder="confirm password" id="conf_pword" name="confirm_password">
+        <input type="password" minlength="6" placeholder="confirm password" id="conf_pword" name="confirm_password">
     </div>
     <!-- action buttons -->
 	<div class="buttons">
