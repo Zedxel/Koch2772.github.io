@@ -52,6 +52,7 @@ session_start();
     <span class="lname">
         <input type="text" placeholder="Last Name" id="lName" name="lName" minlength="2" required><br>
     </span>
+    <!-- Don't require for new user anymore - Leaving commented incase
     <div class="res">        
         <label id="Addresslbl" >Residential address</label><br>
     </div>
@@ -64,17 +65,18 @@ session_start();
     <div class="postCode">
         <input type=text placeholder="Postcode" id="Postcode" name="Postcode" >
     </div>
+    -->
     <div class="p-Num">        
         <label id="Phonelbl" >Phone number</label><br>
     </div>
 	<div class="pNum">
-        <input type="text" placeholder="Phone - 12345 123 1234" id="Phone" name="Phone" >
+        <input type="text" maxlength="14" placeholder="Phone - 12345 123 1234" id="Phone" name="Phone" required >
     </div>
     <div class="e-mail">        
         <label id="emaillbl" >e-mail address</label><br>
     </div>
     <div class="email">
-        <input type="text" placeholder="e-mail" id="email" name="email" ><br>  
+        <input type="text" maxlength="100" placeholder="e-mail" id="email" name="email" required><br>  
     </div>
     <div class="upword">
     <label id="upword">Username and Password</label><br>
