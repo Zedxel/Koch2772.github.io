@@ -28,8 +28,8 @@ $_SERVER["REQUEST_METHOD"] == "POST";
             // Store data in session variables
             header("location: index.php");
             $_SESSION["loggedin"] = true;
-            $_SESSION["id"] = $cid;
-            $_SESSION["username"] = $usrname;                            
+            $_SESSION["id"] = $item["custId"];
+            $_SESSION["username"] = $uname;                            
                             
             // Redirect user to the home page
             header("location: index.php");
