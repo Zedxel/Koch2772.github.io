@@ -165,6 +165,7 @@ function delete_cart($conn) {
     }
 }
 
+/*
 function update_product_qty($conn) {
 
     // Query to get cart details for cust
@@ -217,5 +218,6 @@ function update_product_qty($conn) {
         }
     }
 }
+*/
 
 ?>

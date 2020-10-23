@@ -60,7 +60,7 @@ session_start();
 
                   create_invoice($conn, $fName, $lName, $email, $address1, $address2, $apartment, $planet, $galaxy, $system, $postcode, $phone, $finCost);
                   
-                  update_product_qty($conn);
+                  // update_product_qty($conn);
 
                   // Removes the users cart from the database - update product QTY
                   delete_cart($conn);
