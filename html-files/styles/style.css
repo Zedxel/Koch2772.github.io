@@ -334,6 +334,25 @@ ul#menu {
     color: #1565c0;
     font-weight: bold;
 }
+
+#Checkout {
+    margin-left: 30%;
+    font-family: 'Mystical', arial;
+    font-size: 24px;
+    text-shadow: 1px 1px 1px #aaa;
+    text-decoration: none;
+    color: #9b2fda;
+}
+
+#Checkout a:hover {
+    color: #1565c0;
+}
+
+#Checkout a.selected {
+    color: #1565c0;
+    font-weight: bold;
+}
+
 /** CART MENU LINK/TEXT **/
 
 #carttotal {
