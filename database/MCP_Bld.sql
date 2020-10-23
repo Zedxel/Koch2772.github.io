@@ -59,12 +59,14 @@ CREATE TABLE Product (
 	PRIMARY KEY(stockNum)
 );
 
+/*
 CREATE TABLE Card (
 	custId INT NOT NULL,
 	cardNum	char(21) NOT NULL,
 	PRIMARY KEY(custId),
 	FOREIGN KEY(custId) REFERENCES Customer(custId)
 );
+*/
 
 CREATE TABLE Cart (
 	custId INT NOT NULL,
