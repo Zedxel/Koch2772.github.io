@@ -34,7 +34,6 @@
                         </a>
                     </div>
                 </li>
-
                 <li>
                     <div class="category-product">
                         <a href="category-horns.php">
@@ -76,6 +75,15 @@
                         <a href="category-talons.php">
                             <img src="productImages/drag6490.jpg" alt="productimg">
                             <h2>Talons</h2>
+                        </a>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="category-product">
+                        <a href="category-all.php">
+                            <img src="productImages/merm3500.jpg" alt="productimg">
+                            <h2>All Poducts</h2>
                         </a>
                     </div>
                 </li>
