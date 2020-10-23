@@ -125,17 +125,48 @@ a:hover h2 {
 
 /** CART **/
 
+
 .cart-container {
     margin: 8px;
-}
-
-.cart {
-    color: darkorchid;
 }
 
 #removebtn {
     size: 6px;
     color: darkred;
+    width:100%;
+    background-color:#744fc6;
+    border:none;
+}
+
+
+.cart {
+  font-family:'Mystical';
+  font-size:20px;
+  color: #b31aff;
+  text-align:right;
+  margin-left:10%;
+}
+
+
+.cart-container{
+  background-color:#6f136c;
+}
+
+.cartTitle {
+  font-family:'Mystical';
+  text-align:center;
+  font-size:300%;
+  color: #b31aff;
+}
+
+.cartImage{
+  width:70px;
+  height:70px;
+  float: right;
+  margin-right:10px;
+  border:solid;
+  border-color:#b31ae7;
+  border-width:1;
 }
 
 /** SIDEBAR **/
