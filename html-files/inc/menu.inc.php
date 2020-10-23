@@ -31,7 +31,12 @@ $stat = status();
             foreach ($results as $row ) { ?>
                 <div class="cart-container">
                 <div class="cartTitle"> <?php echo $row['productName']; ?></div>
-                <img class="cartImage"src="productimages/<?php echo $row['stockNum'];?>.jpg" alt="<?php echo $row['productName']; ?>"><br>
+                <?php 
+                echo "<img class=\"cartImage\"src=\"productimages/";
+                echo substr($row['stockNum'],0,8);
+                echo ".jpg";
+                echo "\" alt=\"";
+                echo $row['productName']; ?>"><br>
                 <span class="cart">Quantity: <?php echo $row['qty']; ?></span><br>
                 <span class="cart">Total: $<?php echo $row['totalCost']; ?></span><br><br>
                 <form method="post"><label for="button1"></label><button id="removebtn" name="button1" value="<?php echo $row['stockNum']; ?>" type="submit">Remove from cart</button></form>

@@ -12,7 +12,7 @@
     
     <link rel="stylesheet" href="styles/style.css">
     <meta charset="utf-8" />
-    <meta name="author" content="T Temby, J Gibson, Author 3, Author 4" />
+	<meta name="author" content="Kochanski Group - T Temby, J Gibson, B Gray, P Chu" />
     <meta name="description" content="Assignment 2 - COMP2772" />
     <script src="scripts/script.js" defer></script>
     <title>Mystic Shop</title>
