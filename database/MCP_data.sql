@@ -12,6 +12,7 @@ INSERT INTO Product VALUES ('drag6490', 'Dragon talon', 'Eastern dragon, 5 inch 
 INSERT INTO Product VALUES ('merm3500', 'Mermaid scale', 'Different colors, kept fresh in seawater', 10.00, 1810, 'Scale');
 INSERT INTO Product VALUES ('phnx7350', 'Phoenix beak', 'Upper and lower beaks, some scorch marks', 1200.00, 6, 'Beak');
 INSERT INTO Product VALUES ('basi9550', 'Basilisk fang', 'Large fangs, venom removed, clean', 100.00, 580, 'Fangs');
+INSERT INTO Product VALUES ('phnx7330', 'Phoenix Feather', 'Flaming feather from a newly born phoenix.', 225.00, 10, 'Feather');
 
 INSERT INTO Card VALUES ('1', '0005 21568 78562 0011');
 
