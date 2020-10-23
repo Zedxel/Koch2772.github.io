@@ -45,7 +45,7 @@ $stat = status();
     if ($_SESSION['loggedin']) {
         echo "<a href='shippingdetail.php' id='Checkout'>Check out</a>";
     } else {
-        echo "<a href='loginpage.php' id='Checkout'>Sign in to use cart!</a>";
+        echo "<a href='loginpage.html' id='Checkout'>Sign in to use cart!</a>";
     } ?>
 
 </div>
