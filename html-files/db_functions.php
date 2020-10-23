@@ -201,7 +201,7 @@ function update_product_qty($conn) {
                 mysqli_stmt_execute($stmt);
 
                 // Store the product qty for stockNum in array
-                $prodqty = mysqli_stmt_fetch($stmt);
+                mysqli_stmt_bind_result($stmt, $prodqty);
                 // Remove the cart qty from prod qty - store in $newqty
                 $newqty = $prodqty - $row["qty"];
 
