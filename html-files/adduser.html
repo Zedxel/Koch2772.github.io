@@ -1,81 +1,107 @@
 <?php
-// Include config file
-require_once "inc/dbconn.inc.php";
- 
-// Define variables and initialize with empty values
-$username = "";
-$password = "";
-$confirm_password = "";
-$username_err = "";
-$password_err = "";
-$confirm_password_err = "";
- 
-// Processing form data when form is submitted
-$_SERVER["REQUEST_METHOD"] == "POST";
-	$uname = trim($_POST['username']);
-    // Prepare a select statement
-    $sql = "SELECT usrNme FROM Customer WHERE usrNme = ?";
-        
-    $stmt = mysqli_prepare($conn, $sql);
-    // Bind variables to the prepared statement as parameters
-    mysqli_stmt_bind_param($stmt, "s", htmlspecialchars($uname));            
-    // Attempt to execute the prepared statement
-    if(mysqli_stmt_execute($stmt)) {
-        // store result
-        mysqli_stmt_store_result($stmt);
-        // Check if username exists				
-        if(mysqli_stmt_num_rows($stmt) == 1){
-            $username_err = "This username is already taken.";
-			header("location: usertaken.html");
-        } else {
-            $username = trim($uname);
-        }
-        // Close statement
-        mysqli_stmt_close($stmt);
-    }
-    // Validate password
-    if(strlen(trim($_POST["password"])) < 6){
-        $password_err = "Password must have at least 6 characters.";
-    } else {
-        $password = password_hash(trim($_POST["password"]), PASSWORD_DEFAULT);
-    }
-    // Validate confirm password
-    $confirm_password = trim($_POST["confirm_password"]);
-            if (!password_verify($confirm_password, $password)) {
-                echo "Let me in, I'm genuine!";
-            }
-    // Check input errors before inserting in database
-    if(empty($username_err) && empty($password_err) && empty($confirm_password_err)) {
-        // Prepare an insert statement
-        $sql = "INSERT INTO Customer (title, fname, lname, phone, email, usrNme, pwd) VALUES (?, ?, ?, ?, ?, ?, ?)";
-         
-        if($stmt = mysqli_prepare($conn, $sql)) {
-            // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sssssss", $_POST["custTitle"], $_POST["fName"], $_POST["lName"],
-                             $_POST["Phone"], $_POST["email"], $uname, $pword);
-            
-            // Set parameters
-            $uname = $username;
-            $pword = $password;
-            
-            // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)) {
-                // Redirect to login page
-                header("location: usercreatesucc.html");
-            } else {
-                echo "Something went wrong. Please try again later.";
-            }
-
-            // Close statement
-            mysqli_stmt_close($stmt);
-        }
-    } else {
-        echo $confirm_password_err;
-        echo $password_err;
-        echo $username_err;
-    }
-    
-    // Close connection
-    mysqli_close($conn);
+session_start();
 ?>
- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/customer.css">
+    <style>
+        @font-face {
+            font-family: 'Mystical';
+            src: url(fonts/DsMysticora-d9dZ.ttf);
+        }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="author" content="T Temby, J Gibson, B Gray, P Chu" />
+    <meta name="description" content="Assignment 2 - COMP2772" />
+    <script src="scripts/script.js" defer></script>
+    <title>Customer Details</title>
+</head>
+
+<body>     
+<div class="title">
+    <div class="mysticfont">
+        <h1>Mystic Shop</h1>
+	</div>
+</div> 
+
+<br>
+
+<div class="customerdetail">
+
+	<div class="sub-Heading">
+		<h2>Please enter your personal details</h2>
+    </div>
+
+    <!-- start of the form getting customer details -->
+    <form action="adduser.php" method ="POST">
+        
+    <select name="custTitle" id="custTitle" required="required"><br>
+        <option value="Mr">Mr</option>
+        <option value="Mrs">Mrs</option>
+        <option value="Miss">Miss</option>
+        <option value="Ms">Ms</option>
+        <option value="Dr">Dr</option>
+    </select>
+
+    <span class="fname">
+        <input type="text" placeholder="First Name" id="fName" name="fName" minlength="2" required>
+    </span>
+    <span class="lname">
+        <input type="text" placeholder="Last Name" id="lName" name="lName" minlength="2" required><br>
+    </span>
+    <!-- Don't require for new user anymore - Leaving commented incase
+    <div class="res">        
+        <label id="Addresslbl" >Residential address</label><br>
+    </div>
+    <div class="resAddr">
+        <input type="text" placeholder = "Address" id="Address" name="Address" ><br>
+    </div>
+    <div class="Suburb">   
+        <input type="text" placeholder="Suburb" id="Suburb" name="Suburb" ><br>
+    </div>         
+    <div class="postCode">
+        <input type=text placeholder="Postcode" id="Postcode" name="Postcode" >
+    </div>
+    -->
+    <div class="p-Num">        
+        <label id="Phonelbl" >Phone number</label><br>
+    </div>
+	<div class="pNum">
+        <input type="text" maxlength="14" placeholder="Phone - 12345 123 1234" id="Phone" name="Phone" required >
+    </div>
+    <div class="e-mail">        
+        <label id="emaillbl" >e-mail address</label><br>
+    </div>
+    <div class="email">
+        <input type="text" maxlength="100" placeholder="e-mail" id="email" name="email" required><br>  
+    </div>
+    <div class="upword">
+    <label id="upword">Username and Password</label><br>
+    </div>
+    <div class="uname">
+        <input type="text" placeholder="username" id="uname" name="username">
+    </div>    
+    <div class="pword">
+        <input type="password" minlength="6" placeholder="password" id="pword" name="password" required>
+    </div>
+    <div class="conf_pword">
+        <input type="password" minlength="6" placeholder="confirm password" id="conf_pword" name="confirm_password" required>
+    </div>
+    <!-- action buttons -->
+	<div class="buttons">
+		<input type="button" value="Continue Shopping" class="backButton" onClick="window.location='index.php';">
+		<input type="reset" value="Reset" class="resetButton">
+		<input type="submit" class="submitButton" value="Submit">
+	</div>
+</div>
+</form> <!-- end of form -->
+<!-- Reminder message -->
+<div class="reminder">
+    <p id="shipReminder"><b>Please ensure your details are correct before you click "Submit" .</b></p><br>
+</div>
+
+</body>
+</html>
