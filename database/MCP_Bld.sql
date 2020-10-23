@@ -13,8 +13,7 @@ CREATE TABLE Customer(
 	phone varchar(14) NOT NULL DEFAULT 555,
 	email varchar(100),
 	usrNme varchar (20) NOT NULL UNIQUE,
-	pwd varchar (20)NOT NULl,
-	pwdHash varchar (200)NOT NULl,
+	pwd varchar (250) NOT NULl,
 	PRIMARY KEY(custId)
 ) AUTO_INCREMENT = 1;
 
