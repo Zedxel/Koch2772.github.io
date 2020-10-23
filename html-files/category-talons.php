@@ -27,6 +27,7 @@
             <div class="mysticfont">
                     <h2>Talons</h2>
             </div>
+                <div class="category-container">
         <?php
                     require_once "inc/dbconn.inc.php";
                     define("DB_HOST", "localhost");
@@ -89,6 +90,7 @@
 	                    }
                     }
                     ?>
+                </div>
     </div>
   </body>
 </html>
