@@ -24,13 +24,12 @@
         <!-- The menu bar html -->        
         <?php require_once "inc/menu.inc.php"; ?>
 
-
         <div class="category-container">
             <ul class="category-list">
                 <li>
                     <div class="category-product">
-                        <a href="category-teeth.php">
-                            <img src="https://via.placeholder.com/300x300" alt="productimg">
+                        <a href="category-fangs.php">
+                            <img src="productImages/basi9550.jpg" alt="productimg">
                             <h2>Exotic Animal Fang's</h2>
                         </a>
                     </div>
@@ -38,54 +37,45 @@
 
                 <li>
                     <div class="category-product">
-                        <a href="category-uniHorns.php">
-                            <img src="https://via.placeholder.com/300x300" alt="productimg">
-                            <h2>Unicorn Horns</h2>
+                        <a href="category-horns.php">
+                            <img src="productImages/unic1100.jpg" alt="productimg">
+                            <h2>Horns</h2>
                         </a>
                     </div>
                 </li>
 
                 <li>
                     <div class="category-product">
-                        <a href="category-phoenixFeathers.php">
-                            <img src="https://via.placeholder.com/300x300" alt="productimg">
-                            <h2>Phoenix Feathers</h2>
+                        <a href="category-feathers.php">
+                            <img src="productImages/phnx7330.jpg" alt="productimg">
+                            <h2>Feathers</h2>
                         </a>
                     </div>
                 </li>
 
                 <li>
                     <div class="category-product">
-                        <a href="category-DS.php">
-                            <img src="productimages/PinkDragonScales.jpg" alt="productimg">
-                            <h2>Dragon Scales</h2>
+                        <a href="category-scales.php">
+                            <img src="productImages/drag6510.jpg" alt="productimg">
+                            <h2>Scales</h2>
                         </a>
                     </div>
                 </li>
 
                 <li>
                     <div class="category-product">
-                        <a href="#">
-                            <img src="https://via.placeholder.com/300x300" alt="productimg">
-                            <h2>TEST</h2>
+                        <a href="category-beaks.php">
+                            <img src="productImages/grif2360.jpg" alt="productimg">
+                            <h2>Beaks</h2>
                         </a>
                     </div>
                 </li>
 
                 <li>
                     <div class="category-product">
-                        <a href="#">
-                            <img src="https://via.placeholder.com/300x300" alt="productimg">
-                            <h2>TEST</h2>
-                        </a>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="category-product">
-                        <a href="#">
-                            <img src="https://via.placeholder.com/300x300" alt="productimg">
-                            <h2>TEST</h2>
+                        <a href="category-talons.php">
+                            <img src="productImages/drag6490.jpg" alt="productimg">
+                            <h2>Talons</h2>
                         </a>
                     </div>
                 </li>
