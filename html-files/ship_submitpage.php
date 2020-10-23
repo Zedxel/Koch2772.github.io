@@ -55,7 +55,6 @@ session_start();
                   $system = $_POST["shipSystem"];
                   $postcode = $_POST["shipPostcode"];
                   $phone = $_POST["shipPhone"];
-                  $creditcard = $_post["creditcard"];
 
                   $finCost = update_cart_cost($conn);
 
@@ -138,12 +137,16 @@ session_start();
 
                 echo "<div id =\"ship-cust-CreditCard\">";
 
-                echo " Credit Card : " .$_POST['creditcard'];
+                echo " Credit Card : "; 
+                echo "**** **** **** ";
+                echo substr($_POST['creditcard'], 15);
                 echo "</div>";
+
+                echo "<h3>Credit Cards are processed and store using a third party</h3>";
 
                 echo "</div>";
 
-                  echo "<a href='index.php'>RETURN TO HOME</a>";
+                  echo "<a href='index.php' id='HOME'>RETURN TO HOME</a>";
 
 
               ?>

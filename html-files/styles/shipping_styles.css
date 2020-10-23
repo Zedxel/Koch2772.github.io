@@ -181,3 +181,21 @@ label
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+#HOME {
+    margin-left: 35%;
+    font-family: 'Mystical', arial;
+    font-size: 24px;
+    text-shadow: 1px 1px 1px #aaa;
+    text-decoration: none;
+    color: #9b2fda;
+}
+
+#HOME a:hover {
+    color: #1565c0;
+}
+
+#HOME a.selected {
+    color: #1565c0;
+    font-weight: bold;
+}
