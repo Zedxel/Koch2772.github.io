@@ -95,7 +95,6 @@ echo "        </div>";
 echo "    </div>";
     require_once "inc/simmilarproducts.inc.php";
     mysqli_close($conn);?>
-    ?>
 
     <script>
     function showDescrption() {

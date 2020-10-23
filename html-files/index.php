@@ -100,7 +100,7 @@
                 <!-- Item -->  
                 <li>
                     <div class="category-product-1x4">
-                        <a href="category-uniHorns.php">
+                        <a href="category-horns.php">
                             <img src="productimages/unic3010.jpg" alt="productimg">
                             <h2>Unicorn Horns</h2>
                             <!--https://www.welchsworkshop.com/products/rainbow-5-padded-unicorn-horn-->
@@ -111,7 +111,7 @@
                 <!-- Item -->  
                 <li>
                     <div class="category-product-1x4">
-                        <a href="category-DS.php">
+                        <a href="category-scales.php">
                             <img src="productimages/merm3500.jpg" alt="productimg">
                             <h2>Dragon Scales</h2>
                         </a>
