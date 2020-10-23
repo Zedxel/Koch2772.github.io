@@ -25,7 +25,7 @@
         <!-- The menu bar html -->        
         <?php require_once "inc/menu.inc.php"; ?>
             <div class="mysticfont">
-                    <h2>Beaks</h2>
+                    <h2>All Products</h2>
             </div>
         <?php
                     require_once "inc/dbconn.inc.php";
