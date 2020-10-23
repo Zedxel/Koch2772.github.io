@@ -37,7 +37,9 @@
                             while ($row = mysqli_fetch_assoc($result)) {
                                 if($row["stockNum"] != $StockNum){
                                     echo    "<div class=\"category-product-1x4\">";
-                                    echo        "<a href=\"#\">";
+                                    echo        "<a href=\"product-";
+                                    echo        $row["stockNum"];
+                                    echo        ".php\">";
                                     echo            "<img src=\"productimages/";
                                     echo            $tmp = $row["stockNum"];
                                     echo            ".jpg\" alt=\"";
