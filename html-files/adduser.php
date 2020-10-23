@@ -37,13 +37,13 @@ $_SERVER["REQUEST_METHOD"] == "POST";
     if(strlen(trim($_POST["password"])) < 6){
         $password_err = "Password must have at least 6 characters.";
     } else {
-        $password = trim($_POST["password"]);
+        $password = password_hash(trim($_POST["password"]), PASSWORD_DEFAULT);
     }
     // Validate confirm password
     $confirm_password = trim($_POST["confirm_password"]);
-        if($password != $confirm_password) {
-            $confirm_password_err = "Password did not match.";
-        }
+            if (!password_verify($confirm_password, $password)) {
+                echo "Let me in, I'm genuine!";
+            }
     // Check input errors before inserting in database
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)) {
         // Prepare an insert statement
