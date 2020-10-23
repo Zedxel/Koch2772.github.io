@@ -165,4 +165,57 @@ function delete_cart($conn) {
     }
 }
 
+function update_product_qty($conn) {
+
+    // Query to get cart details for cust
+    $query = "SELECT stockNum, qty FROM cart WHERE custId = ?";
+
+    $stmt = mysqli_prepare($conn, $query);
+
+    if($stmt) {
+        mysqli_stmt_bind_param($stmt, "s", $_SESSION['id']);
+        mysqli_stmt_execute($stmt);
+
+        mysqli_stmt_bind_result($stmt, $stock, $qty);
+        $cartres = array();
+
+        // store cart details in array $cartres[]
+        while (mysqli_stmt_fetch($stmt)) {
+            $row = array();
+            $row["stock"] = $stock;
+            $row["qty"] = $qty;
+            
+            $cartres[] = $row;
+        }
+
+        // go through each product entry in the $cartres[] array
+        foreach ($cartres as $row ) { 
+
+            // Get the qty from the product table for the stockNum
+            $query = "SELECT stockQty FROM product WHERE stockNum = ?";
+            $stmt = mysqli_prepare($conn, $query);
+
+            // Run statement
+            if($stmt) {
+                mysqli_stmt_bind_param($stmt, "s", $row["stock"]);
+                mysqli_stmt_execute($stmt);
+
+                // Store the product qty for stockNum in array
+                $prodqty = mysqli_stmt_fetch($stmt);
+                // Remove the cart qty from prod qty - store in $newqty
+                $newqty = $prodqty - $row["qty"];
+
+                // Update the qty in product using $newqty
+                $query = "UPDATE product SET stockQty = ? WHERE stockNum = ?";
+                $stmt = mysqli_prepare($conn, $query);
+
+                if($stmt) {
+                    mysqli_stmt_bind_param($stmt, "ss", $newqty, $row["stock"]);
+                    mysqli_stmt_execute($stmt);
+                }
+            }
+        }
+    }
+}
+
 ?>
