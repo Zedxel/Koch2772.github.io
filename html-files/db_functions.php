@@ -188,7 +188,7 @@ function update_product_qty($conn) {
             $cartres[] = $row;
         }
 
-        // go through each product entry in the $cartres[] array
+        // go through each product entry in the $cartres[] array -
         foreach ($cartres as $row ) { 
 
             // Get the qty from the product table for the stockNum
