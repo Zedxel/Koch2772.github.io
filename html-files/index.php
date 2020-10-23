@@ -40,8 +40,8 @@
                 <!-- Item -->  
                 <li>
                     <div class="category-product-1x4">
-                        <a href="product-.php">
-                            <img src="productimages/Unicorn Horn.jpg" alt="productimg">
+                        <a href="product-unic1100.php">
+                            <img src="productimages/unic1100.jpg" alt="productimg">
                             <h2>White Unicorn Horn</h2>
                         </a>
                     </div>
@@ -51,7 +51,7 @@
                 <li>
                     <div class="category-product-1x4">
                         <a href="product-phnx7330.php">
-                            <img src="productimages/Phoenix Feather.jpg" alt="productimg">
+                            <img src="productimages/phnx7330.jpg" alt="productimg">
                             <h2>Phoenix Feather</h2>
                         </a>
                     </div>
@@ -61,7 +61,7 @@
                 <li>
                     <div class="category-product-1x4">
                         <a href="product-basi9550.php">
-                            <img src="productimages/Basilisk Fang.jpg" alt="productimg">
+                            <img src="productimages/basi9550.jpg" alt="productimg">
                             <h2>Basilisk Fang</h2>
                         </a>
                     </div>
@@ -71,7 +71,7 @@
                 <li>
                     <div class="category-product-1x4">
                         <a href="product-drag6510.php">
-                            <img src="productimages/BronzeDragonScales.jpg" alt="productimg">
+                            <img src="productimages/drag6510.jpg" alt="productimg">
                             <h2>Bronze Dragon Scale</h2>
                         </a>
                     </div>
@@ -90,8 +90,8 @@
                 <!-- Item -->  
                 <li>
                     <div class="category-product-1x4">
-                        <a href="category-teeth.php">
-                            <img src="productimages/Basilisk Fang.jpg" alt="productimg">
+                        <a href="category-fangs.php">
+                            <img src="productimages/drag6550.jpg" alt="productimg">
                             <h2>Exotic Animal Fang's</h2>
                         </a>
                     </div>
@@ -101,7 +101,7 @@
                 <li>
                     <div class="category-product-1x4">
                         <a href="category-uniHorns.php">
-                            <img src="productimages/RainbowHorn.jpg" alt="productimg">
+                            <img src="productimages/unic3010.jpg" alt="productimg">
                             <h2>Unicorn Horns</h2>
                             <!--https://www.welchsworkshop.com/products/rainbow-5-padded-unicorn-horn-->
                         </a>
@@ -112,7 +112,7 @@
                 <li>
                     <div class="category-product-1x4">
                         <a href="category-DS.php">
-                            <img src="productimages/PinkDragonScales.jpg" alt="productimg">
+                            <img src="productimages/merm3500.jpg" alt="productimg">
                             <h2>Dragon Scales</h2>
                         </a>
                     </div>
@@ -122,7 +122,7 @@
                 <li>
                     <div class="category-product-1x4">
                         <a href="Categories.php">
-                            <img src="https://via.placeholder.com/300x300" alt="productimg">
+                            <img src="productimages/rigth-arrow.jpg" alt="productimg">
                             <h2>All Categories</h2>
                         </a>
                     </div>
