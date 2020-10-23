@@ -14,6 +14,7 @@ CREATE TABLE Customer(
 	email varchar(100),
 	usrNme varchar (20) NOT NULL UNIQUE,
 	pwd varchar (20)NOT NULl,
+	pwdHash varchar (200)NOT NULl,
 	PRIMARY KEY(custId)
 ) AUTO_INCREMENT = 1;
 
