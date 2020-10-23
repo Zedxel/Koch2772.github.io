@@ -62,7 +62,7 @@ session_start();
                   
                   update_product_qty($conn);
 
-                  // Removes the users cart from the database - update product QTY -
+                  // Removes the users cart from the database - update product QTY
                   delete_cart($conn);
             }
             else {
