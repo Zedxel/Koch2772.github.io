@@ -24,7 +24,7 @@
 
         <!-- The menu bar html -->        
         <?php 
-        $StockNum = "phnx7330";
+        $StockNum = "drag6550";
 
         require_once "inc/menu.inc.php"; 
         require_once "inc/dbconn.inc.php";
@@ -72,7 +72,9 @@ echo                $item["unitCost"];
 echo "              \">";
 echo "              <div class=\"add-to-cart\"><input type=\"submit\" class=\"centerd-button\" value=\"Add to cart\"></div>";
 echo "            </form>";
-echo "            <div class=\"stock-ammount\"><p>ID: basi9550 Stock:";
+echo "            <div class=\"stock-ammount\"><p>ID: ";
+echo              $item["stockNum"];
+echo"             Stock:";
 echo              $item["stockQty"];
 echo "            </p></div>";
 echo "            </div>";
